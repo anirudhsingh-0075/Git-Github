@@ -38,8 +38,8 @@ The logic was built using the four core programming concepts specified in the cu
 The application has been successfully tested against the required problem scenarios:
 
 **Test Case 1: Normal Input**
+```1
 Menu option 1 (Create account)
-
 Name: Anil
  Opening deposit: 2000 
 Account created. A/C No: 1001
@@ -47,18 +47,21 @@ Balance: 2000
 Passed
 
 **Test Case 2: Boundary Input**
-Account 1001 has balance 2000<
+```2
+Account 1001 has balance 2000
 Withdraw 1500 
 Withdrawal successful. Balance: 500
 Passed
 
 **Test Case 3: Invalid Input** 
+```3
 Account 1001 has balance 2000
 Transfer 100 to account 9999
  Account 9999 not found. Transfer cancelled.
 Passed 
 
-**Test Case 4: Valid Scenario** 
+**Test Case 4: Valid Scenario**
+```4
 Accounts: 1001 (2000), 1002 (3000)
 Transfer 1000 from 1002 to 1001
  Transfer successful.
