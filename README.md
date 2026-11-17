@@ -1,23 +1,62 @@
-The objective of this project was to create a banking application using Python 3 that allows customers to open an account, deposit,
-withdraw, transfer money and check their bank account data which would be saves in a text file.
+# Project Report: Simple Banking System
 
-The code that I have written fulfills all the requirements of the project specifications.
--Account creation: It generates accounts with unique auto-incrementing account numbers starting from 1001.
--Core banking functions: There are also the deposit, withdraw, transfer and balance operations using dedicated python functions.
--Minimum balance rule: The code also enforces a minimum balance rule of 500 to always remain in account regardless of withdrawal or transfer operations.
--Input validation: Measures have also been taken to block invalid value inputs.
--Persistent storage: Persistent storage is used to save all data sequentially so that no data is lost if the program is closed.
+## 1. Problem Statement
 
-4 core programming concepts were used as specified in the project instrutions.
-1. Loops: A 'while true' loop drives the main console menu allowing us to perform multiple operations continuously until we choose to exit.
-2. Functions: The code is modularized using the 'def' keyword and some functions handle specific tasks like 'load_accounts()', transfer_money(),' to make the code cleaner and esier to debug.
-3. Conditions: if-elif-else statements are used to route the menu options and perform logical checks such as verifying an account or if the withdrwl amount is higher than the balance.
-4. File Handling: The program reads fron ("r") and writes to ("w") to a text file (bank.txt).
+The objective of this project is to create a console-based banking application in Python 3 that allows customers to open an account, deposit, withdraw, transfer money, and check their balance, with all account data persistently stored in a text file.
 
-The test cases have also been passed successfully.
+## 2. Features Implemented
 
-Instructions to run
-1. Ensure Python 3 is installed on system
-2. open the terminal.
-3. run the script.
-4. follow the on screen menu (1-6) to interact with the banking system.
+This solution strictly fulfills all the bare minimum requirements outlined in the project specifications:
+
+* **Account Creation:** Generates accounts with unique, auto-incrementing account numbers starting from `1001`.
+
+
+* **Core Banking Functions:** Fully implements deposit, withdrawal, transfer, and balance enquiry operations using dedicated Python functions.
+
+
+* **Minimum Balance Rule:** Enforces a strict minimum balance rule, ensuring that Rs. 500 must always remain in an account during creation, withdrawal, and transfer operations.
+
+
+* **Input Validation:** Validates all user inputs to prevent program crashes from non-numeric characters and blocks invalid transfers to non-existent accounts.
+
+
+* **Persistent Storage:** Stores and loads all account data sequentially using a local `bank.txt` file, ensuring no data is lost when the program closes.
+
+
+
+## 3. Core Programming Concepts Applied
+
+The logic was built using the four core programming concepts specified in the curriculum:
+
+* **Loops:** A `while True` loop drives the main console menu, allowing the user to perform multiple operations continuously until they explicitly choose to exit.
+* **Functions:** The system is heavily modularized using the `def` keyword. Distinct functions handle specific tasks (e.g., `load_accounts()`, `transfer_money()`), making the code clean, reusable, and easy to debug.
+* **Conditions:** `if-elif-else` statements are used to route menu choices and perform crucial logical checks, such as verifying if an account exists or if a withdrawal exceeds the allowed minimum balance.
+* **File Handling:** The program reads from (`"r"`) and writes to (`"w"`) a text file (`bank.txt`). Data is parsed using the string `.split(",")` method to load balances into memory and reformatted to save updates instantly.
+
+## 4. Test Cases & Expected Outputs
+
+The application has been successfully tested against the required problem scenarios:
+
+| Scenario | Input Action | Expected Output | Status |
+| --- | --- | --- | --- |
+| **Test Case 1: Normal Input** | Menu option 1 (Create account)<br>
+
+<br>Name: Anil, Opening deposit: 2000 | Account created. A/C No: 1001 | Balance: 2000 | Passed |
+| **Test Case 2: Boundary Input** | Account 1001 has balance 2000<br>
+
+<br>Withdraw 1500 | Withdrawal successful. Balance: 500 | Passed |
+| **Test Case 3: Invalid Input** | Account 1001 has balance 2000<br>
+
+<br>Transfer 100 to account 9999 | Account 9999 not found. Transfer cancelled. | Passed |
+| **Test Case 4: Valid Scenario** | Accounts: 1001 (2000), 1002 (3000)<br>
+
+<br>Transfer 1000 from 1002 to 1001 | Transfer successful.<br>
+
+<br>1002 balance: 2000 | 1001 balance: 3000 | Passed |
+
+## 5. Instructions to Run
+
+1. Ensure Python 3 is installed on the system.
+2. Open a terminal or command prompt in the project folder.
+3. Run the script using the command: `python One.py`.
+4. Follow the on-screen numeric menu (1-6) to interact with the banking system.
