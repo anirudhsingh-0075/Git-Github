@@ -37,22 +37,34 @@ The logic was built using the four core programming concepts specified in the cu
 
 The application has been successfully tested against the required problem scenarios:
 
-| Scenario | Input Action | Expected Output | Status |
-| --- | --- | --- | --- |
-| **Test Case 1: Normal Input** | Menu option 1 (Create account)<br>
+**Test Case 1: Normal Input**
+Menu option 1 (Create account)
 
-<br>Name: Anil, Opening deposit: 2000 | Account created. A/C No: 1001 | Balance: 2000 | Passed |
-| **Test Case 2: Boundary Input** | Account 1001 has balance 2000<br>
+Name: Anil
+ Opening deposit: 2000 
+Account created. A/C No: 1001
+Balance: 2000 
+Passed
 
-<br>Withdraw 1500 | Withdrawal successful. Balance: 500 | Passed |
-| **Test Case 3: Invalid Input** | Account 1001 has balance 2000<br>
+**Test Case 2: Boundary Input**
+Account 1001 has balance 2000<
+Withdraw 1500 
+Withdrawal successful. Balance: 500
+Passed
 
-<br>Transfer 100 to account 9999 | Account 9999 not found. Transfer cancelled. | Passed |
-| **Test Case 4: Valid Scenario** | Accounts: 1001 (2000), 1002 (3000)<br>
+**Test Case 3: Invalid Input** 
+Account 1001 has balance 2000
+Transfer 100 to account 9999
+ Account 9999 not found. Transfer cancelled.
+Passed 
 
-<br>Transfer 1000 from 1002 to 1001 | Transfer successful.<br>
-
-<br>1002 balance: 2000 | 1001 balance: 3000 | Passed |
+**Test Case 4: Valid Scenario** 
+Accounts: 1001 (2000), 1002 (3000)
+Transfer 1000 from 1002 to 1001
+ Transfer successful.
+1002 balance: 2000
+1001 balance: 3000 
+Passed 
 
 ## 5. Instructions to Run
 
