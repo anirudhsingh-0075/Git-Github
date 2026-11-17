@@ -1,5 +1,13 @@
 # Project Report: Simple Banking System
 
+Name - Anirudh Singh
+
+Class- BE-CSE-1-26-1-K
+
+Section- K
+
+ERP- RU-26-00693
+
 ## 1. Problem Statement
 
 The objective of this project is to create a console-based banking application in Python 3 that allows customers to open an account, deposit, withdraw, transfer money, and check their balance, with all account data persistently stored in a text file.
